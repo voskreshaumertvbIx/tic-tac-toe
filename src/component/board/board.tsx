@@ -60,7 +60,8 @@ const Board = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Tic Tac Toe</h1>
+     <h1 className={styles.title}>Tic Tac Toe</h1>
+
       <div className={styles.board}>
         <div className={styles.row}>
           {data.map((cell, index) => (
@@ -71,7 +72,7 @@ const Board = () => {
             >
               {cell && (
                 <img
-                  className="p-[5px] w-[140px] h-[140px]"
+                  className="p-[10px] w-[140px] h-[140px] rounded-[15px]"
                   src={`./img/${cell === "x" ? "1" : "2"}.png`}
                   alt="cell"
                 />
@@ -80,7 +81,7 @@ const Board = () => {
           ))}
         </div>
       </div>
-      {win && <p>Player {winner === 'x' ? 1 : 2} wins!</p>}
+      {win && <p className={styles.winner_text}>Player {winner === 'x' ? 1 : 2} wins!</p>}
       {draw && <p>its draw!</p>}
     </div>
   );
