@@ -1,17 +1,13 @@
+import Background from "./component/background/background";
 
-import Background from './component/background/background'
-// import Board from './component/board/board'
-import ChooseCharacter from './component/chooseCharacter/chooseCharacter'
-import './index.css'
+import "./index.css";
+import AppRoutes from "./routes";
 function App() {
-  
-
   return (
     <Background>
-     {/* <Board/> */}
-    <ChooseCharacter/>
+      <AppRoutes />
     </Background>
-  )
+  );
 }
 
-export default App
+export default App;

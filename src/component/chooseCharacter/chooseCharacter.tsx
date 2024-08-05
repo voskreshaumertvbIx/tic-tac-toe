@@ -1,12 +1,15 @@
 import { useEffect, useState, useMemo } from "react";
 import { anime_character } from "./character";
-
-interface AnimeCharacter {
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../routes/routes";
+import styles from './../board/styles.module.css'
+export interface AnimeCharacter {
   title: string;
   path: string;
 }
 
 const ChooseCharacter = () => {
+  const navigate = useNavigate();
   const [isPlayerOneTurn, setIsPlayerOneTurn] = useState(true);
   const [player1, setPlayer1] = useState<AnimeCharacter | null>(null);
   const [player2, setPlayer2] = useState<AnimeCharacter | null>(null);
@@ -16,6 +19,7 @@ const ChooseCharacter = () => {
         anime.title !== player1?.title && anime.title !== player2?.title
     );
   }, [player1, player2]);
+
   const handleCharacterSelection = (character: AnimeCharacter) => {
     if (player1 && player2) {
       return;
@@ -24,7 +28,6 @@ const ChooseCharacter = () => {
       !player1 && setPlayer1(character);
     } else {
       !player2 && setPlayer2(character);
-      
     }
     setIsPlayerOneTurn(!isPlayerOneTurn);
   };
@@ -33,26 +36,33 @@ const ChooseCharacter = () => {
     console.log(`Current player: ${isPlayerOneTurn ? "Player 1" : "Player 2"}`);
     console.log(player1, "playyyyyer1111");
     console.log(player2, "playyyyyer222222");
-  }, [isPlayerOneTurn, player1, player2]);
+
+    if (player1 && player2) {
+      navigate(ROUTES.game, { state: { player1, player2 } });
+    }
+  }, [isPlayerOneTurn, player1, player2, navigate]);
+
   return (
-    <div className="">
-      <h1>choose ur character </h1>
-      {player1 && player2
-        ? "Both selected"
-        : `Player ${isPlayerOneTurn ? "1" : "2"} choose your character`}
-      <div className="grid grid-cols-5 gap-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-cover" style={{ backgroundImage: `url('/path/to/your/background-image.png')` }}>
+      <h1 className={styles.default_text}>Choose your character</h1>
+      <div className={styles.default_text}>
+        {player1 && player2
+          ? "Both selected"
+          : `Player ${isPlayerOneTurn ? "1" : "2"} choose your character`}
+      </div>
+      <div className="grid grid-cols-5 gap-4 px-4">
         {cards.map(({ title, path }) => (
           <div
             onClick={() => handleCharacterSelection({ title, path })}
             key={title}
-            className="flex flex-col items-center  bg-[#ffe4e13f] border-[3px] border-[#FF69B4] rounded-[15px] shadow-pink-glow p-[15px] "
+            className="flex flex-col items-center bg-[#ffe4e13f] border-[3px] border-[#FF69B4] rounded-[15px] shadow-pink-glow p-[15px] cursor-pointer transform transition-transform hover:scale-105"
           >
             <img
               src={path}
               alt={title}
-              className="w-[256px] h-[256px] object-cover "
+              className="w-[256px] h-[256px] object-cover rounded-md"
             />
-            <p className="mt-[20px] text-[1.5rem] text-center text-white ">
+            <p className={styles.winner_text}>
               {title}
             </p>
           </div>

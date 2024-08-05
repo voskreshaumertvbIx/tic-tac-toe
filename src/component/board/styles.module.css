@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  
 }
 
 h1 {
@@ -20,12 +19,11 @@ h1 {
   grid-template-rows: repeat(3, 140px);
   gap: 10px;
 
-  background-color: #FFD1DC;
+  background-color: #ffd1dc;
   padding: 40px;
 
   border-radius: 10px;
-  box-shadow: 0 0 10px #FF69B4, 0 0 20px #FF69B4, 0 0 30px #FF69B4;
-
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
 }
 
 .row {
@@ -33,10 +31,10 @@ h1 {
 }
 
 .box {
-  background-color: #FFE4E1;
-  border: 3px solid #FF69B4;
+  background-color: #ffe4e1;
+  border: 3px solid #ff69b4;
   border-radius: 5px;
-  box-shadow: 0 0 10px #FF69B4, 0 0 20px #FF69B4, 0 0 30px #FF69B4;
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
   width: 140px;
   height: 140px;
   display: flex;
@@ -51,16 +49,25 @@ h1 {
 }
 
 .title {
-  color: #39FF14;
+  color: #ffff;
   font-size: 2em;
   text-align: center;
-  margin-bottom: 20px;
-  text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4;
 }
 .winner_text {
-  color: #FFFFFF;
-  font-size: 1.5em;
+  color: #ffffff;
+  font-size: 1.7em;
   text-align: center;
   margin-top: 20px;
-  text-shadow: 0 0 5px #FF69B4, 0 0 10px #FF69B4;
+  text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4;
+}
+
+.default_text {
+  color: #ffffff;
+  font-size: 1.9em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #9b034f, 0 0 10px #da0d73;
 }

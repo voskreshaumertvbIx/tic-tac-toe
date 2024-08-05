@@ -7,5 +7,6 @@ export const anime_character = [
   {"title": "Nier Automata", "path": "/img/nierautomata/1.png"},
   {"title": "Osi no Ko", "path": "/img/osinoko/1.png"},
   {"title": "Rezero", "path": "/img/rezero/1.png"},
-  {"title": "SAO", "path": "/img/sao/1.png"}
+  {"title": "SAO", "path": "/img/sao/1.png"},
+  {"title": "Gotoubun no Hanayome", "path": "/img/gotobun/1.png"}
 ]
