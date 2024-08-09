@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { anime_character } from "./character";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../routes/routes";
+import { ROUTES } from "../../../routes/routes";
 import styles from './../board/styles.module.css'
 export interface AnimeCharacter {
   title: string;

@@ -1,5 +1,7 @@
 export const ROUTES = {
   mainpage: "/",
-  chooseCharacter: '/selection',
+  chooseCharacter: "/choose-character",
   game: "/game",
+  onlineChoose: "/online-choose",
+  onlineBoard: "/online-board"
 };

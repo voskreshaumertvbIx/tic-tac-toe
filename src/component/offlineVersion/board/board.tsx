@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { winningCombinations } from "./winningcombination";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AnimeCharacter } from "../chooseCharacter/chooseCharacter";
-import { ROUTES } from "../../routes/routes";
+import { ROUTES } from "../../../routes/routes";
 
 const Board = () => {
   const navigate = useNavigate();

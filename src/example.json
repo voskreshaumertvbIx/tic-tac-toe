@@ -1,0 +1,21 @@
+{
+  "games": {
+    "exampleGameId": {
+      "board": ["", "", "", "", "", "", "", "", ""],
+      "count": 0,
+      "win": false,
+      "draw": false,
+      "winner": null,
+      "player1": {
+        "title": "Character1",
+        "path": "/path/to/character1.png",
+        "symbol": "x"
+      },
+      "player2": {
+        "title": "Character2",
+        "path": "/path/to/character2.png",
+        "symbol": "o"
+      }
+    }
+  }
+}
