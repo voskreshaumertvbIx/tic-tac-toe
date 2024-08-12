@@ -206,14 +206,14 @@ const OnlineBoard = () => {
             New game
           </button>
           <button
-            className="text-2xl text-white py-2 px-4 bg-pink-500 bg-opacity-75 rounded-lg hover:bg-pink-600 transition-transform transform hover:scale-105 mt-2"
+            className="text-2xl text-white py-2 px-4 bg-pink-500 bg-opacity-75 rounded-lg hover:bg-pink-600 transition-transform transform hover:scale-105 mb-2"
             onClick={totalResetGame}
           >
             Back to selection
           </button>
 
           <button
-            className="text-2xl text-white py-2 px-4 bg-pink-500 bg-opacity-75 rounded-lg hover:bg-pink-600 transition-transform transform hover:scale-105 mt-2"
+            className="text-2xl text-white py-2 px-4 bg-pink-500 bg-opacity-75 rounded-lg hover:bg-pink-600 transition-transform transform hover:scale-105 mb-2"
             onClick={() => navigate(ROUTES.mainpage)}
           >
             Menu

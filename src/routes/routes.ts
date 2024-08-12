@@ -3,5 +3,7 @@ export const ROUTES = {
   chooseCharacter: "/choose-character",
   game: "/game",
   onlineChoose: "/online-choose",
-  onlineBoard: "/online-board"
+  onlineBoard: "/online-board",
+  aichoose:'/aichoose',
+  aigame:"/aigame"
 };

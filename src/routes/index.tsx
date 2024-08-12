@@ -5,6 +5,8 @@ import ChooseCharacter from "../component/offlineVersion/chooseCharacter/chooseC
 import OnlineBoard from "../component/onlineVersion/board/board";
 import ChooseOnlineCharacter from "../component/onlineVersion/chooseCharacter/chooseCharacter";
 import Startingmenu from "../component/startingmenu/startingmenu";
+import AichooseCharacter from "../component/AIversion/chooseCharacter/chooseCharacter";
+import AiBoard from "../component/AIversion/board/board";
 
 const AppRoutes = () => {
   return (
@@ -17,7 +19,9 @@ const AppRoutes = () => {
         element={<ChooseOnlineCharacter />}
       />
       <Route path={`${ROUTES.onlineBoard}/:gameId`} element={<OnlineBoard />} />
-      <Route path="/test" element={<div>Test Page</div>} />
+      <Route path={ROUTES.aichoose} element={<AichooseCharacter/>}/>
+      <Route path={ROUTES.aigame} element={<AiBoard/>} />
+
 
     </Routes>
   );

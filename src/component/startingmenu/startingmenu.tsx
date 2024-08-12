@@ -1,11 +1,8 @@
-
-
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../routes/routes";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const Startingmenu = () => {
-  
   const navigate = useNavigate();
 
   const handleOfflineSubmit = () => {
@@ -15,6 +12,9 @@ const Startingmenu = () => {
   const handleOnlineSubmit = () => {
     const uniqueGameId = uuidv4();
     navigate(`${ROUTES.onlineChoose}/${uniqueGameId}`);
+  };
+  const aiOnSubmit = () => {
+    navigate(ROUTES.aichoose);
   };
 
   return (
@@ -30,6 +30,10 @@ const Startingmenu = () => {
         onClick={handleOnlineSubmit}
       >
         Start Online Game
+      </button>
+      <button className="text-2xl text-white py-2 px-4 bg-green-500 bg-opacity-75 rounded-lg hover:bg-green-600 transition-transform transform hover:scale-105 m-4"
+      onClick={aiOnSubmit}>
+        Play with Ai
       </button>
     </div>
   );
